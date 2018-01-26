@@ -8,11 +8,13 @@ $(document).ready(function() {
   var gem3 = Math.floor(Math.random() * 12) +1;
   var gem4 = Math.floor(Math.random() * 12) +1;
   var gemTotal = 0;
+  var win = new Audio("win.mp3");
+  var loose = new Audio ("loose.mp3");
   //Generates random number for User to try to match
-  var rando = Math.floor(Math.random() * 102) + 19;
+  var randomNum = Math.floor(Math.random() * 102) + 19;
 
   //Places random number in html
-  $('#randomNumber').text(rando);
+  $('#randomNumber').text(randomNum);
 
   //Inserts scores into html
   $("#wins").text('Wins: ' + wins);
@@ -21,28 +23,31 @@ $(document).ready(function() {
 
   // resets game
   function gameReset() {
-    rando = Math.floor(Math.random() * 102) + 19;
-    $('#randomNumber').text(rando);
+    randomNum = Math.floor(Math.random() * 102) + 19;
+    $('#randomNumber').text(randomNum);
     gem1 = Math.floor(Math.random() * 12) + 1;
     gem2 = Math.floor(Math.random() * 12) + 1;
     gem3 = Math.floor(Math.random() * 12) + 1;
     gem4 = Math.floor(Math.random() * 12) + 1;
     gemTotal = 0;
+    $("#gemTotal").empty();
     console.log(gemTotal);
   };
 
 
   //Adds wins to wins section
-  function champ() {
-    alert("Winner! Press OK to play again.");
+  function win() {
+    win.play();
+    $("#outcome").show().text("Winner!")
     wins++;
     $("#wins").text('Wins: ' + wins);
     gameReset();
   };
 
   //Adds losses to losses section
-  function loser() {
-    alert("Loser! Press OK to play again.");
+  function lose() {
+    loose.play();
+    $("#outcome").show().text("Loser!")
     losses++;
     $("#losses").text('Losses: ' + losses);
     gameReset();
@@ -55,11 +60,11 @@ $(document).ready(function() {
     gemTotal = gemTotal + gem1;
     console.log('New gemTotal= ' + gemTotal);
     $('#gemTotal').text(gemTotal);
-      if (gemTotal == rando) {
-        champ();
+      if (gemTotal == randomNum) {
+        win();
       }
-      else if (gemTotal > rando) {
-        loser();
+      else if (gemTotal > randomNum) {
+        lose();
       }
   });
 
@@ -68,11 +73,11 @@ $(document).ready(function() {
     gemTotal = gemTotal + gem2;
     console.log('New gemTotal= ' + gemTotal);
     $('#gemTotal').text(gemTotal);
-      if (gemTotal == rando) {
-        champ();
+      if (gemTotal == randomNum) {
+        win();
       }
-      else if (gemTotal > rando) {
-        loser();
+      else if (gemTotal > randomNum) {
+        lose();
       }
   });
 
@@ -81,11 +86,11 @@ $(document).ready(function() {
     gemTotal = gemTotal + gem3;
     console.log('New gemTotal= ' + gemTotal);
     $('#gemTotal').text(gemTotal);
-      if (gemTotal == rando) {
-        champ();
+      if (gemTotal == randomNum) {
+        win();
       }
-      else if (gemTotal > rando) {
-        loser();
+      else if (gemTotal > randomNum) {
+        lose();
       }
   });
 
@@ -94,11 +99,11 @@ $(document).ready(function() {
     gemTotal = gemTotal + gem4;
     console.log('New gemTotal= ' + gemTotal);
     $('#gemTotal').text(gemTotal);
-      if (gemTotal == rando) {
-        champ();
+      if (gemTotal == randomNum) {
+        win();
       }
-      else if (gemTotal > rando) {
-        loser();
+      else if (gemTotal > randomNum) {
+        lose();
       }
   });
 

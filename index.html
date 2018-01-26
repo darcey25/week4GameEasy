@@ -1,128 +1,128 @@
 <!DOCTYPE html>
-<html>
-<head>
+	<html>
+	<head>
 
-	<title>Crystals Collector</title>
+		<title>Crystals Collector</title>
 
-	<meta charset="UTF-8">
+		<meta charset="UTF-8">
 
-	<!--link to bootstrap-->
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<!-- Added link to the jQuery Library -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<!--link to bootstrap-->
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Added link to the jQuery Library -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-</head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+	</head>
 
-<body>
+
+
+	<body>
 	
-	<div class="container">
+		<div class="container">
 
 
-		<div class="row">
-			<div class="col-md-12">
-				<div id="headerBlock" class="panel panel-default">
-				  <div class="panel-heading">
-				    Crystals Collector!
-				  </div>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="headerBlock" class="panel panel-default">
+				  	<div class="panel-heading">
+				    	Crystals Collector!
+				  	</div>
+					</div>
 				</div>
 			</div>
-		</div>
 
 
-		<div class="row">
-			<div class="col-md-12">
-				<div class="panel panel-default instructionsBox">
-				  <div class="panel-body">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<div class="panel panel-default instructionsBox">
+				  	<div class="panel-body">
 
-				 	<p class="instructions">You will be given a random number at the start of the game.</p>
+				 		<p class="instructions">You will be given a random number at the start of the game.</p>
 
-				 	<br/>
+				 		<br/>
 
-				 	<p class="instructions">There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+				 		<p class="instructions">There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
 
-				 	<br/>
+				 		<br/>
 					
-					<p class="instructions">You win the game by matching your total score to a random number. You lose the game if your total score goes above the random number.</p>
+						<p class="instructions">You win the game by matching your total score to a random number. You lose the game if your total score goes above the random number.</p>
 
-					<br/>
+						<br/>
 
-					<p class="instructions">The value of each crystal is hidden from you until you click on it.</p>
+						<p class="instructions">The value of each crystal is hidden from you until you click on it.</p>
 
-					<br/>
+						<br/>
 
-					<p class="instructions">Each time when the game starts, the game will change the values of each crystal.</p>
+						<p class="instructions">Each time when the game starts, the game will change the values of each crystal.</p>
 
-				  </div>
+				  	</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default randomNumber">
+				  				<div class="panel-body">
+				    				<div id="randomNumber"></div>
+				  				</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default winsLosses">
+				  				<div class="panel-body">
+				  					<div id="outcome" style="display: none"></div>
+				    				<div id="wins" class="text-center">Wins: </div>
+				    				<div id="losses" class="text-center">Losses: </div>
+				  				</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		<div>
 
-
-		<div class="row">
-			<div class="col-md-1">&nbsp;</div>
-			<div class="col-md-5">
-				<div class="panel panel-default randomNumber">
-				  <div class="panel-body">
-				    <div id="randomNumber"></div>
-				  </div>
-				</div>
+			<div class="row">
+				<div class="col-xs-6 col-md-3 thumbnail redgem">
+		    		<img class="image" src="assets/images/red.png" alt="Red Gem" id="redgem">
+		  		</div>
+		  		<div class="col-xs-6 col-md-3 thumbnail">
+		    		<img class="image" src="assets/images/blue.png" alt="Blue Gem" id="bluegem">
+		  		</div>
+		  		<div class="col-xs-6 col-md-3 thumbnail">
+		    		<img class="image" src="assets/images/yellow.png" alt="Yellow Gem" id="yellowgem">
+		  		</div>
+		  		<div class="col-xs-6 col-md-3 thumbnail">
+		    		<img class="image" src="assets/images/green.png" alt="Green Gem" id="greengem">
+		  		</div>
 			</div>
-			<div class="col-md-2">&nbsp;</div>
 
-			<div class="col-md-3">
-				<div class="panel panel-default winsLosses">
-				  <div class="panel-body">
-				    <div id="wins">Wins: </div>
-				    <div id="losses">Losses: </div>
-				  </div>
+
+			<div class="row">
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<div class="panel panel-default score">
+				  		<div class="panel-heading scoreHeading">
+				    		<h3 class="panel-title">Your Score</h3>
+				  		</div>
+				  		<div class="panel-body scoreBody">
+				    		<div id="gemTotal"></div>
+				  		</div>
+					</div>
 				</div>
+				<div class="col-md-2">&nbsp;</div>
 			</div>
-			<div class="col-md-1"></div>
+
+
 		</div>
 
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
 
-		<div class="row">
-		  <div class="col-xs-6 col-md-3 thumbnail redgem">
-		    <img src="assets/images/red.jpg" alt="Red Gem" id="redgem">
-		  </div>
-		  <div class="col-xs-6 col-md-3 thumbnail">
-		    <img src="assets/images/blue.jpg" alt="Blue Gem" id="bluegem">
-		  </div>
-		  <div class="col-xs-6 col-md-3 thumbnail">
-		    <img src="assets/images/yellow.jpg" alt="Yellow Gem" id="yellowgem">
-		  </div>
-		  <div class="col-xs-6 col-md-3 thumbnail">
-		    <img src="assets/images/green.jpg" alt="Green Gem" id="greengem">
-		  </div>
-		</div>
-
-
-		<div class="row">
-			<div class="col-md-8">
-				<div class="panel panel-default score">
-				  <div class="panel-heading scoreHeading">
-				    <h3 class="panel-title">Your Score</h3>
-				  </div>
-				  <div class="panel-body scoreBody">
-				    <div id="gemTotal"></div>
-				  </div>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
-
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
-
-</body>
+	</body>
 </html>
