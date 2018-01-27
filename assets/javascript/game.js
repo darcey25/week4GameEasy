@@ -8,8 +8,8 @@ $(document).ready(function() {
   var gem3 = Math.floor(Math.random() * 12) +1;
   var gem4 = Math.floor(Math.random() * 12) +1;
   var gemTotal = 0;
-  var win = new Audio("win.mp3");
-  var loose = new Audio ("loose.mp3");
+  var winner = new Audio("../sounds/win.mp3");
+  var looser = new Audio ("loose.mp3");
   //Generates random number for User to try to match
   var randomNum = Math.floor(Math.random() * 102) + 19;
 
@@ -37,7 +37,7 @@ $(document).ready(function() {
 
   //Adds wins to wins section
   function win() {
-    win.play();
+    winner.play();
     $("#outcome").show().text("Winner!")
     wins++;
     $("#wins").text('Wins: ' + wins);
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
   //Adds losses to losses section
   function lose() {
-    loose.play();
+    looser.play();
     $("#outcome").show().text("Loser!")
     losses++;
     $("#losses").text('Losses: ' + losses);
